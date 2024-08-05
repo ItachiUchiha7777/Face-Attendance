@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #video {
+            width: 5 0%;
+            margin: 0 auto;
+            border-radius: 15%;
+        }
+        #status {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Unlocker</h1>
+    <img id="video" src="{{ url_for('video_feed') }}" alt="Video Feed">
+    <div id="status">Face Not Matched</div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
