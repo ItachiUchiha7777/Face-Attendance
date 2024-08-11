@@ -22,14 +22,17 @@ if len(faces_preloaded) == 0:
 
 cap = cv2.VideoCapture(0)
 recognized = False
+def gen_frames():
+    return "function"
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# @app.route('/video_feed')
-# def video_feed():
-#     return 
+@app.route('/video_feed')
+def video_feed():
+    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/status')
 def status():
